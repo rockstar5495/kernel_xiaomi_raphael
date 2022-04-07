@@ -109,6 +109,7 @@ void msm_vidc_debugfs_deinit_inst(struct msm_vidc_inst *inst);
 void msm_vidc_debugfs_update(struct msm_vidc_inst *inst,
 		enum msm_vidc_debugfs_event e);
 int msm_vidc_check_ratelimit(void);
+
 #else
 static int msm_vidc_debug = 0;
 EXPORT_SYMBOL(msm_vidc_debug);
