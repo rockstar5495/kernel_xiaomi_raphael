@@ -1354,15 +1354,6 @@ void *__init fixmap_remap_fdt(phys_addr_t dt_phys, int *size, pgprot_t prot)
 	return dt_virt;
 }
 
-	/*
-	 * memblock_dbg is not up because of parse_early_param get called after
-	 * setup_machine_fd. To capture fdt reserved info below pr_info is
-	 * added.
-	 */
-	pr_info("memblock_reserve: 0x%x %pS\n", size - 1, (void *) _RET_IP_);
-
-}
-
 int __init arch_ioremap_pud_supported(void)
 {
 	/*
